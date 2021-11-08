@@ -33,3 +33,4 @@
 
 # Build 
 build
+share/jupyter/kernels/xasm/kernel.json
