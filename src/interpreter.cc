@@ -39,6 +39,7 @@ void Interpreter::set_address(string start ) {
   pc = start;
 }
 
+
 // store in Memory
 // store hlt too
 // execute the line
@@ -52,5 +53,24 @@ bool Interpreter::execute(const string &line) {
   }
   return true;
 }
+
+/*
+// @note @mergeconflict sarita singh's commit; @adig solve later
+void Interpreter::multiLine() {
+  cin.ignore();
+  cout << "\nEnter the code:\n";
+  while (1) {
+    cout << ">> " << pc << " ";
+    string line;
+    getline(cin, line);
+    Memory[pc] = line;
+    cout<<line<<"\n";
+    sequence.push_back(pc);
+    if (line == "HLT") {
+      break;
+    }
+    pc = updatedAddress(pc, Memory);
+}
+*/
 
 string Interpreter::get_error() { return last_error; }
